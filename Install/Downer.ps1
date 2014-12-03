@@ -65,6 +65,6 @@ Remove-Item "$downloadir\Install\ShowUI" -Force
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\Powercraft.lnk")
 $Shortcut.TargetPath = "$shortcutpath"
-$Shortcut.IconLocation = "$env:USERPROFILE\$foldername\Installer\PowerCraft.ico"
+$Shortcut.IconLocation = "$downloadir\Install\PowerCraft.ico"
 $Shortcut.Save()
 Exit-PSSession
