@@ -66,5 +66,6 @@ $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\PowerCraftMSM.lnk")
 $Shortcut.TargetPath = "$shortcutpath"
 $Shortcut.IconLocation = "$downloadir\Install\PowerCraft.ico"
+$shortcut.WorkingDirectory = "$downloadir\PowerCraft\"
 $Shortcut.Save()
 Exit-PSSession
