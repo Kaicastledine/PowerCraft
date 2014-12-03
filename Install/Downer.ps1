@@ -1,5 +1,5 @@
 ﻿#Set variables
-$foldername = "PowerCraft(MSM)"
+$foldername = "PowerCraftMSM"
 $downloadir = "$env:USERPROFILE\$foldername"
 $dlurl = "https://github.com/LogoiLab/PowerCraft-Server-Manager/archive/master.zip"
 $dlfile = "$downloadir\PowerCraftGitClone.zip"
