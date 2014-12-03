@@ -1,1 +1,1 @@
-powershell -ExecutionPolicy ByPass -NoLogo -NoProfile -encodedCommand LgBcAFAAbwB3AGUAcgBDAHIAYQBmAHQALQBNAGEAbgBhAGcAZQByAC4AcABzADEA
+powershell -ExecutionPolicy ByPass -NoProfile -File .\PowerCraft-Manager.ps1
