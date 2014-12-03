@@ -54,12 +54,12 @@ Download-Item -url $dlurl -targetfile $dlfile
 Decompress-Zips -zippath $downloadir
 #Remove the downloaded zip file (copy protection and disk space)
 Remove-Item "$downloadir\$zipname" -Force
-Move-Item -Path "$downloadir\PowerCraft-Server-Manager-master\*" -Destination $downloadir -Force
+Move-Item -Path "$downloadir\PowerCraft-Server-Manager-master\*" -Destination $downloadir -Force | Out-Null
 Remove-Item "$downloadir\PowerCraft-Server-Manager-master" -Force -Recurse
 Remove-Item "$downloadir\.gitignore" -Force
 Remove-Item "$downloadir\.gitattributes" -Force
 cd "$downloadir\Install"
-Move-Item -Path "$downloadir\Install\ShowUI\*" -Destination "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\ShowUI" -Force
+Move-Item -Path "$downloadir\Install\ShowUI\*" -Destination "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\ShowUI" -Force | Out-Null
 Remove-Item "$downloadir\Install\ShowUI" -Force
 # Create a PowerCraft Shortcut with Windows PowerShell
 $WshShell = New-Object -ComObject WScript.Shell
