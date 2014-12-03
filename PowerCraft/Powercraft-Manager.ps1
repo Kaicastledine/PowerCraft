@@ -112,7 +112,7 @@ EXAMPLES
     PowerShell -Command "& {Get-EventLog -LogName security}"
 
     # To use the -EncodedCommand parameter:
-    $command = '.\$env:USERPROFILE\PowerCraftMSM\PowerCraft\PowerCraft-Manager.ps1'
+    $command = 'cd $env:USERPROFILE\PowerCraftMSM\PowerCraft; .\PowerCraft-Manager.ps1'
     $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
     $encodedCommand = [Convert]::ToBase64String($bytes)
     Write-Host $encodedCommand
