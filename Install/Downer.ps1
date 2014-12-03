@@ -64,7 +64,7 @@ Remove-Item "$downloadir\Install\ShowUI" -Force -Recurse
 # Create a PowerCraft Shortcut with Windows PowerShell
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\PowerCraft.lnk")
-$Shortcut.TargetPath = "$shortcutpath"
+$Shortcut.TargetPath = "powershell -ExecutionPolicy ByPass -File .\$shortcutpath"
 $Shortcut.IconLocation = "$downloadir\Install\PowerCraft.ico"
 $shortcut.WorkingDirectory = "$downloadir\PowerCraft\"
 $Shortcut.Save()
