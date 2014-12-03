@@ -58,7 +58,7 @@ Move-Item -Path "$downloadir\PowerCraft-Server-Manager-master\*" -Destination $d
 Remove-Item "$downloadir\PowerCraft-Server-Manager-master" -Force -Recurse
 Remove-Item "$downloadir\.gitignore" -Force
 Remove-Item "$downloadir\.gitattributes" -Force
-cd "$downloadir\Installer"
+cd "$downloadir\Install"
 .\ShowIU.cmd
 # Create a PowerCraft Shortcut with Windows PowerShell
 $WshShell = New-Object -ComObject WScript.Shell
