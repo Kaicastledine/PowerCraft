@@ -59,7 +59,7 @@ Remove-Item "$downloadir\PowerCraft-Server-Manager-master" -Force -Recurse
 Remove-Item "$downloadir\.gitignore" -Force
 Remove-Item "$downloadir\.gitattributes" -Force
 cd "$downloadir\Install"
-.\ShowIU.cmd
+Move-Item -Path "ShowUI\*" -Destination "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\ShowUI" -Force
 # Create a PowerCraft Shortcut with Windows PowerShell
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\Powercraft.lnk")
