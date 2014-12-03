@@ -60,7 +60,7 @@ Remove-Item "$downloadir\.gitignore" -Force
 Remove-Item "$downloadir\.gitattributes" -Force
 cd "$downloadir\Install"
 Move-Item -Path "$downloadir\Install\ShowUI\*" -Destination "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\ShowUI" -Force | Out-Null
-Remove-Item "$downloadir\Install\ShowUI" -Force
+Remove-Item "$downloadir\Install\ShowUI" -Force -Recurse
 # Create a PowerCraft Shortcut with Windows PowerShell
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\Powercraft.lnk")
