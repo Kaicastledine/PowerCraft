@@ -4,7 +4,7 @@ $downloadir = "$env:USERPROFILE\$foldername"
 $dlurl = "https://github.com/LogoiLab/PowerCraft-Server-Manager/archive/master.zip"
 $dlfile = "$downloadir\PowerCraftGitClone.zip"
 $zipname = "PowerCraftGitClone.zip"
-$shortcutpath = "$env:USERPROFILE\$foldername\PowerCraft\Launcher.bat"
+$shortcutpath = "$downloadir\PowerCraft\Launcher.bat"
 #Function to download file
 function Download-Item($url, $targetFile){
     $webclient = New-Object System.Net.WebClient
