@@ -264,6 +264,42 @@
             <xs:attribute name="type" type="xs:string" use="required" />
           </xs:complexType>
         </xs:element>
+        <xs:element name="max-players">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedByte" />
+              <xs:element name="Current" type="xs:unsignedByte" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="max-tick-time">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedShort" />
+              <xs:element name="Current" type="xs:unsignedShort" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spawn-monsters">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spawn-protection">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedByte" />
+              <xs:element name="Current" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

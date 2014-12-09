@@ -1,119 +1,135 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <document>
-    <generator-settings type="Property">
+    <generator-settings type="WorldProperty">
       <Default></Default>
       <Current></Current>
     </generator-settings>
-    <op-permission-level type="Property">
+    <op-permission-level type="PlayerProperty">
       <Default>4</Default>
       <Current>4</Current>
     </op-permission-level>
-    <allow-nether type="Property">
+    <allow-nether type="WorldProperty">
       <Default>true</Default>
       <Current>true</Current>
     </allow-nether>
-    <resource-pack-hash type="Property">
+    <resource-pack-hash type="ServerProperty">
       <Default></Default>
       <Current></Current>
     </resource-pack-hash>
-    <level-name type="Property">
+    <level-name type="WorldProperty">
       <Default>world</Default>
       <Current>world</Current>
     </level-name>
-    <enable-query type="Property">
+    <enable-query type="ServerProperty">
       <Default>false</Default>
       <Current>false</Current>
     </enable-query>
-    <allow-flight type="Property">
+    <allow-flight type="WorldProperty">
       <Default>false</Default>
       <Current>false</Current>
     </allow-flight>
-    <announce-player-achievements type="Property">
+    <announce-player-achievements type="ServerProperty">
       <Default>true</Default>
       <Current>true</Current>
     </announce-player-achievements>
-    <server-port type="Property">
+    <server-port type="ServerProperty">
       <Default>25565</Default>
       <Current>25565</Current>
     </server-port>
-    <max-world-size type="Property">
+    <max-world-size type="WorldProperty">
       <Default>29999984</Default>
       <Current>29999989</Current>
     </max-world-size>
-    <level-type type="Property">
+    <level-type type="WorldProperty">
       <Default>DEFAULT</Default>
       <Current>DEFAULT</Current>
     </level-type>
-    <enable-rcon type="Property">
+    <enable-rcon type="ServerProperty">
       <Default>false</Default>
       <Current>false</Current>
     </enable-rcon>
-    <level-seed type="Property">
+    <level-seed type="WorldProperty">
       <Default></Default>
       <Current></Current>
     </level-seed>
-    <force-gamemode type="Property">
+    <force-gamemode type="WorldProperty">
       <Default>false</Default>
       <Current>false</Current>
     </force-gamemode>
-    <server-ip type="Property">
+    <server-ip type="ServerProperty">
       <Default></Default>
       <Current></Current>
     </server-ip>
-    <network-compression-threshold type="Property">
+    <network-compression-threshold type="ServerProperty">
       <Default>256</Default>
       <Current>256</Current>
     </network-compression-threshold>
-    <max-build-height type="Property">
+    <max-build-height type="WorldProperty">
       <Default>256</Default>
       <Current>256</Current>
     </max-build-height>
-    <spawn-ncps type="Property">
+    <spawn-ncps type="SpawnProperty">
       <Default>true</Default>
       <Current>true</Current>
     </spawn-ncps>
-    <white-list type="Property">
+    <white-list type="PlayerProperty">
       <Default>false</Default>
       <Current>false</Current>
     </white-list>
-    <spawn-animals type="Property">
+    <spawn-animals type="SpawnProperty">
       <Default>true</Default>
       <Current>true</Current>
     </spawn-animals>
-    <hardcore type="Property">
+    <hardcore type="WorldProperty">
       <Default>false</Default>
       <Current>false</Current>
     </hardcore>
-    <snooper-enabled type="Property">
+    <snooper-enabled type="ServerProperty">
       <Default>true</Default>
       <Current>true</Current>
     </snooper-enabled>
-    <online-mode type="Property">
+    <online-mode type="ServerProperty">
       <Default>true</Default>
       <Current>true</Current>
     </online-mode>
-    <resource-pack type="Property">
+    <resource-pack type="ServerProperty">
       <Default></Default>
       <Current></Current>
     </resource-pack>
-    <pvp type="Property">
+    <pvp type="PlayerProperty">
       <Default>true</Default>
       <Current>true</Current>
     </pvp>
-    <difficulty type="Property">
+    <difficulty type="WorldProperty">
       <Default>1</Default>
       <Current>1</Current>
     </difficulty>
-    <enable-command-block type="Property">
+    <enable-command-block type="WorldProperty">
       <Default>false</Default>
       <Current>false</Current>
     </enable-command-block>
-    <gamemode type="Property">
+    <gamemode type="WorldProperty">
       <Default>0</Default>
       <Current>0</Current>
     </gamemode>
-    <player-idle-timeout type="Property">
+    <player-idle-timeout type="PlayerProperty">
       <Default>0</Default>
       <Current>0</Current>
     </player-idle-timeout>
+    <max-players type="ServerProperty">
+      <Default>20</Default>
+      <Current>20</Current>
+    </max-players>
+    <max-tick-time type="ServerProperty">
+      <Default>60000</Default>
+      <Current>60000</Current>
+    </max-tick-time>
+    <spawn-monsters type="SpawnProperty">
+      <Default>true</Default>
+      <Current>true</Current>
+    </spawn-monsters>
+    <spawn-protection type="WorldProperty">
+      <Default>16</Default>
+      <Current></Current>
+    </spawn-protection>
 </document>

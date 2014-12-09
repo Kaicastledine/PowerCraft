@@ -51,7 +51,6 @@ function Set-Version($ver){
 }
 function Menu-EditorMain{
     if(Test-Path "$manageFindMenuIn\Minecraft.Properties.xml"){
-        break
     }
     else{
         Copy-Item -Path "$env:USERPROFILE\PowerCraftMSM\PowerCraft\Minecraft.Properties.xml" -Destination $manageFindMenuIn
@@ -246,4 +245,4 @@ function Menu-Main{
 $console = $host.UI.RawUI
 $console.ForegroundColor = "green"
 $console.BackgroundColor = "brown"
-Main-Menu
+Menu-Main
