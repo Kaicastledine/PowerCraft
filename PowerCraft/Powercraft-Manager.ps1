@@ -243,4 +243,7 @@ function Menu-Main{
         }
     }
 }
+$console = $host.UI.RawUI
+$console.ForegroundColor = "green"
+$console.BackgroundColor = "brown"
 Main-Menu
