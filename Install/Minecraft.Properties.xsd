@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="generator-settings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" />
+              <xs:element name="Current" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="op-permission-level">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedByte" />
+              <xs:element name="Current" type="xs:unsignedByte" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="allow-nether">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resource-pack-hash">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" />
+              <xs:element name="Current" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="level-name">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:string" />
+              <xs:element name="Current" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enable-query">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="allow-flight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="announce-player-achievements">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="server-port">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedShort" />
+              <xs:element name="Current" type="xs:unsignedShort" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="max-world-size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedInt" />
+              <xs:element name="Current" type="xs:unsignedInt" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="level-type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:string" />
+              <xs:element name="Current" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enable-rcon">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="level-seed">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" />
+              <xs:element name="Current" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="force-gamemode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="server-ip">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" />
+              <xs:element name="Current" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="network-compression-threshold">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedShort" />
+              <xs:element name="Current" type="xs:unsignedShort" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="max-build-height">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedShort" />
+              <xs:element name="Current" type="xs:unsignedShort" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spawn-ncps">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="white-list">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spawn-animals">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="hardcore">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="snooper-enabled">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="online-mode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resource-pack">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" />
+              <xs:element name="Current" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pvp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="difficulty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedByte" />
+              <xs:element name="Current" type="xs:unsignedByte" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enable-command-block">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:boolean" />
+              <xs:element name="Current" type="xs:boolean" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="gamemode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedByte" />
+              <xs:element name="Current" type="xs:unsignedByte" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="player-idle-timeout">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Default" type="xs:unsignedByte" />
+              <xs:element name="Current" type="xs:unsignedByte" />
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

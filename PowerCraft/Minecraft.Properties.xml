@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<document>
+    <generator-settings type="Property">
+      <Default></Default>
+      <Current></Current>
+    </generator-settings>
+    <op-permission-level type="Property">
+      <Default>4</Default>
+      <Current>4</Current>
+    </op-permission-level>
+    <allow-nether type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </allow-nether>
+    <resource-pack-hash type="Property">
+      <Default></Default>
+      <Current></Current>
+    </resource-pack-hash>
+    <level-name type="Property">
+      <Default>world</Default>
+      <Current>world</Current>
+    </level-name>
+    <enable-query type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </enable-query>
+    <allow-flight type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </allow-flight>
+    <announce-player-achievements type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </announce-player-achievements>
+    <server-port type="Property">
+      <Default>25565</Default>
+      <Current>25565</Current>
+    </server-port>
+    <max-world-size type="Property">
+      <Default>29999984</Default>
+      <Current>29999989</Current>
+    </max-world-size>
+    <level-type type="Property">
+      <Default>DEFAULT</Default>
+      <Current>DEFAULT</Current>
+    </level-type>
+    <enable-rcon type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </enable-rcon>
+    <level-seed type="Property">
+      <Default></Default>
+      <Current></Current>
+    </level-seed>
+    <force-gamemode type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </force-gamemode>
+    <server-ip type="Property">
+      <Default></Default>
+      <Current></Current>
+    </server-ip>
+    <network-compression-threshold type="Property">
+      <Default>256</Default>
+      <Current>256</Current>
+    </network-compression-threshold>
+    <max-build-height type="Property">
+      <Default>256</Default>
+      <Current>256</Current>
+    </max-build-height>
+    <spawn-ncps type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </spawn-ncps>
+    <white-list type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </white-list>
+    <spawn-animals type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </spawn-animals>
+    <hardcore type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </hardcore>
+    <snooper-enabled type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </snooper-enabled>
+    <online-mode type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </online-mode>
+    <resource-pack type="Property">
+      <Default></Default>
+      <Current></Current>
+    </resource-pack>
+    <pvp type="Property">
+      <Default>true</Default>
+      <Current>true</Current>
+    </pvp>
+    <difficulty type="Property">
+      <Default>1</Default>
+      <Current>1</Current>
+    </difficulty>
+    <enable-command-block type="Property">
+      <Default>false</Default>
+      <Current>false</Current>
+    </enable-command-block>
+    <gamemode type="Property">
+      <Default>0</Default>
+      <Current>0</Current>
+    </gamemode>
+    <player-idle-timeout type="Property">
+      <Default>0</Default>
+      <Current>0</Current>
+    </player-idle-timeout>
+</document>
