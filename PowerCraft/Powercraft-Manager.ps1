@@ -1,121 +1,246 @@
-﻿if($ver = "1.7.10"){
-$dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+﻿function Get-PowerCraftXML($Path){
+    [xml]$xml = Get-Content "$Path"
+    $properties = $xml.document.ChildNodes.LocalName
+    $children = $xml.document.ChildNodes
+    $inc = "0"
+    foreach($property in $properties){
+        $temp = $children[$inc]
+        New-Variable -Name "default_$property" -Force -Option Constant -Value $temp.Default
+        $inc = $inc + "1"
+    }
+    foreach($property in $properties){
+        $temp = $children[$inc]
+        New-Variable -Name "current_$property" -Force -Option Constant -Value $temp.Current
+        $inc = $inc + "1"
+    }
 }
-Microsoft Windows [Version 6.1.7601]
-Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
-
-C:\Users\cbaxter>powershell -File
-The command cannot be run because the File parameter requires a file path. Suppl
-y a path for the File parameter and then try the command again.
-
-PowerShell[.exe] [-PSConsoleFile <file> | -Version <version>]
-    [-NoLogo] [-NoExit] [-Sta] [-Mta] [-NoProfile] [-NonInteractive]
-    [-InputFormat {Text | XML}] [-OutputFormat {Text | XML}]
-    [-WindowStyle <style>] [-EncodedCommand <Base64EncodedCommand>]
-    [-File <filePath> <args>] [-ExecutionPolicy <ExecutionPolicy>]
-    [-Command { - | <script-block> [-args <arg-array>]
-                  | <string> [<CommandParameters>] } ]
-
-PowerShell[.exe] -Help | -? | /?
-
--PSConsoleFile
-    Loads the specified Windows PowerShell console file. To create a console
-    file, use Export-Console in Windows PowerShell.
-
--Version
-    Starts the specified version of Windows PowerShell.
-    Enter a version number with the parameter, such as "-version 2.0".
-
--NoLogo
-    Hides the copyright banner at startup.
-
--NoExit
-    Does not exit after running startup commands.
-
--Sta
-    Starts the shell using a single-threaded apartment.
-    Single-threaded apartment (STA) is the default.
-
--Mta
-    Start the shell using a multithreaded apartment.
-
--NoProfile
-    Does not load the Windows PowerShell profile.
-
--NonInteractive
-    Does not present an interactive prompt to the user.
-
--InputFormat
-    Describes the format of data sent to Windows PowerShell. Valid values are
-    "Text" (text strings) or "XML" (serialized CLIXML format).
-
--OutputFormat
-    Determines how output from Windows PowerShell is formatted. Valid values
-    are "Text" (text strings) or "XML" (serialized CLIXML format).
-
--WindowStyle
-    Sets the window style to Normal, Minimized, Maximized or Hidden.
-
--EncodedCommand
-    Accepts a base-64-encoded string version of a command. Use this parameter
-    to submit commands to Windows PowerShell that require complex quotation
-    marks or curly braces.
-
--File
-    Runs the specified script in the local scope ("dot-sourced"), so that the
-    functions and variables that the script creates are available in the
-    current session. Enter the script file path and any parameters.
-    File must be the last parameter in the command, because all characters
-    typed after the File parameter name are interpreted
-    as the script file path followed by the script parameters.
-
--ExecutionPolicy
-    Sets the default execution policy for the current session and saves it
-    in the $env:PSExecutionPolicyPreference environment variable.
-    This parameter does not change the Windows PowerShell execution policy
-    that is set in the registry.
-
--Command
-    Executes the specified commands (and any parameters) as though they were
-    typed at the Windows PowerShell command prompt, and then exits, unless
-    NoExit is specified. The value of Command can be "-", a string. or a
-    script block.
-
-    If the value of Command is "-", the command text is read from standard
-    input.
-
-    If the value of Command is a script block, the script block must be enclosed
-
-    in braces ({}). You can specify a script block only when running PowerShell.
-exe
-    in Windows PowerShell. The results of the script block are returned to the
-    parent shell as deserialized XML objects, not live objects.
-
-    If the value of Command is a string, Command must be the last parameter
-    in the command , because any characters typed after the command are
-    interpreted as the command arguments.
-
-    To write a string that runs a Windows PowerShell command, use the format:
-        "& {<command>}"
-    where the quotation marks indicate a string and the invoke operator (&)
-    causes the command to be executed.
-
--Help, -?, /?
-    Shows this message. If you are typing a PowerShell.exe command in Windows
-    PowerShell, prepend the command parameters with a hyphen (-), not a forward
-    slash (/). You can use either a hyphen or forward slash in Cmd.exe.
-
-EXAMPLES
-    PowerShell -PSConsoleFile SqlSnapIn.Psc1
-    PowerShell -version 2.0 -NoLogo -InputFormat text -OutputFormat XML
-    PowerShell -Command {Get-EventLog -LogName security}
-    PowerShell -Command "& {Get-EventLog -LogName security}"
-
-    # To use the -EncodedCommand parameter:
-    $command = '.\PowerCraft-Manager.ps1'
-    $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
-    $encodedCommand = [Convert]::ToBase64String($bytes)
-    Write-Host $encodedCommand
-    #powershell.exe -encodedCommand $encodedCommand
-
-C:\Users\cbaxter>
+function Set-Version($ver){
+    if($ver = "1.8.0"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+    if($ver = "1.7.10"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+     if($ver = "1.7.9"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+     if($ver = "1.7.8"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+     if($ver = "1.7.7"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+    if($ver = "1.7.6"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+    if($ver = "1.7.5"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+      if($ver = "1.7.4"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+      if($ver = "1.7.3"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+     if($ver = "1.7.2"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+    if($ver = "1.7.1"){
+        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
+    }
+}
+function Menu-EditorMain{
+    if(Test-Path "$manageFindMenuIn\Minecraft.Properties.xml"){
+        break
+    }
+    else{
+        Copy-Item -Path "$env:USERPROFILE\PowerCraftMSM\PowerCraft\Minecraft.Properties.xml" -Destination $manageFindMenuIn
+    }
+    Get-PowerCraftXML -Path "$manageFindMenuIn\Minecraft.Properties.xml"
+    Write-Host 'PowerCraft MSM (Minecraft Server Manager) V1.0'
+    Write-Host ''
+    Write-Host '₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'
+    $inc = 1
+    foreach($property in $properties){
+        $temp = "| $inc Modify value for: $property"
+        $temp2 = " " * (69 - $temp.Length)
+        $temp3 = "$temp" + "$temp2" + "|"
+        Write-Host "$temp3"
+        $inc++
+    }
+    Write-Host '₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'
+    $inc--
+    $mainEditorMenuIn = Read-Host "[1-$inc]₪>"
+    switch($mainEditorMenuIn){
+     1 {
+        Clear-Host
+        Write-Host
+     }
+     2 {
+        Clear-Host
+     }
+     3 {
+        Clear-Host
+     }
+     4 {
+        Clear-Host
+     }
+     5 {
+        Clear-Host
+     }
+     6 {
+        Clear-Host
+     }
+     7 {
+        Clear-Host
+     }
+     8 {
+        Clear-Host
+     }
+     9 {
+        Clear-Host
+     }
+     10 {
+        Clear-Host
+     }
+     11 {
+        Clear-Host
+     }
+     12 {
+        Clear-Host
+     }
+     13 {
+        Clear-Host
+     }
+     14 {
+        Clear-Host
+     }
+     15 {
+        Clear-Host
+     }
+     16 {
+        Clear-Host
+     }
+     17 {
+        Clear-Host
+     }
+     18 {
+        Clear-Host
+     }
+     19 {
+        Clear-Host
+     }
+     20 {
+        Clear-Host
+     }
+     21 {
+        Clear-Host
+     }
+     22 {
+        Clear-Host
+     }
+     23 {
+        Clear-Host
+     }
+     24 {
+        Clear-Host
+     }
+     25 {
+        Clear-Host
+     }
+     26 {
+        Clear-Host
+     }
+     27 {
+        Clear-Host
+     }
+     28 {
+        Clear-Host
+     }
+     29 {
+        Clear-Host
+     }
+    }
+}
+function Menu-ManageFind{
+    Write-Host 'PowerCraft MSM (Minecraft Server Manager) V1.0'
+    Write-Host ''
+    Write-Host '₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'
+    Write-Host '|Please input the full path to your Minecraft server folder|'
+    Write-Host '₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'
+    $manageFindMenuIn = Read-Host "₪>"
+    if(Test-Path -Path "$manageFindMenuIn\server.properties"){
+        Write-Host "Path:"
+        Write-Host "$manageFindMenuIn"
+        Write-Host "Is this correct?"
+        $manageFindMenuConfirmIn = Read-Host "[y/n]₪>"
+        $temp = $manageFindMenuConfirmIn.ToLower()
+        switch($temp){
+            y {
+                Clear-Host
+                Menu-EditorMain
+            }
+            n {
+                Clear-Host
+                Menu-ManageFind
+            }
+            default {
+                Clear-Host
+                Menu-EditorMain
+            }
+        }
+    }
+    else{
+        Clear-Host
+        Write-Warning 'Please enter a valid path that contains a "server.properties" file!'
+        Menu-ManageFind
+    }
+}
+function Menu-CreateMain{
+    Write-Host "Confirm server creation:"
+    $mainCreateMenuIn = Read-Host "[y/n]₪>"
+    $temp = $mainCreateMenuIn.ToLower()
+    switch($temp){
+            y {
+                Clear-Host
+                Create-Server
+            }
+            n {
+                Clear-Host
+                Menu-Main
+            }
+            default {
+                Clear-Host
+                Create-Server
+            }
+    }
+}
+function Menu-Main{
+    Write-Host 'PowerCraft MSM (Minecraft Server Manager) V1.0'
+    Write-Host ''
+    Write-Host '₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'
+    Write-Host '| 1 Manage a prexisting Minecraft server  |'
+    Write-Host '| 2 Create a new managed server           |'
+    Write-Host '₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪₪'
+    $mainMenuIn = Read-Host "[1-2]₪>"
+    switch($mainMenuIn){
+        1 {
+            Clear-Host
+            Menu-ManageFind
+        }
+        2 {
+            Clear-Host
+            Menu-CreateMain
+        }
+        default{
+            Clear-Host
+            Menu-ManageFind
+        }
+        else{
+            Clear-Host
+            Write-Warning "Please enter a valid menu item choice!"
+            Menu-Main
+        }
+    }
+}
+Main-Menu
