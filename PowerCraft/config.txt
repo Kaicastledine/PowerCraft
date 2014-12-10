@@ -1,0 +1,10 @@
+SERVER_NAME=MyServer
+SERVER_LOCATION=C:\Users\cbaxter\OneDrive\Programs\GitHub\PowerCraft-Server-Manager\PowerCraft
+BACKUP_LOCATION=C:\Users\cbaxter\OneDrive\Programs\GitHub\PowerCraft-Server-Manager\backup
+CRAFTBUKKIT=craftbukkit.jar
+JAVA_FLAGS=-Xmx1G
+CRAFTBUKKIT_OPTIONS=-o True -p 25565
+TEST_DEPENDENCIES=True
+DELETE_LOG=False
+TAKE_BACKUP=True
+RESTART_PAUSE=5

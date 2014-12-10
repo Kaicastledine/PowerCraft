@@ -14,48 +14,13 @@
         $inc = $inc + "1"
     }
 }
-function Set-Version($ver){
-    if($ver = "1.8.0"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-    if($ver = "1.7.10"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-     if($ver = "1.7.9"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-     if($ver = "1.7.8"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-     if($ver = "1.7.7"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-    if($ver = "1.7.6"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-    if($ver = "1.7.5"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-      if($ver = "1.7.4"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-      if($ver = "1.7.3"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-     if($ver = "1.7.2"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-    if($ver = "1.7.1"){
-        $dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
-    }
-}
 function Menu-EditorMain{
     if(Test-Path "$ServerFolder\Minecraft.Properties.xml"){
     }
     else{
-        Copy-Item -XMLPath "$env:USERPROFILE\PowerCraftMSM\PowerCraft\Minecraft.Properties.xml" -Destination $manageFindMenuIn
+        Copy-Item -Path "$env:USERPROFILE\PowerCraftMSM\PowerCraft\Minecraft.Properties.xml" -Destination $manageFindMenuIn
     }
-    Get-PowerCraftXML -Path "$ServerFolder\Minecraft.Properties.xml"
+    Get-PowerCraftXML -XMLPath "$ServerFolder\Minecraft.Properties.xml"
     Write-Host 'PowerCraft MSM (Minecraft Server Manager) V1.0'
     Write-Host ''
     Write-Host '-----------------------------------------------------------------------------'
@@ -70,13 +35,6 @@ function Menu-EditorMain{
     Write-Host "| $inc Exit                                                                    |"
     Write-Host '-----------------------------------------------------------------------------'
     $mainEditorMenuIn = Read-Host "[1-$inc]->"
-    [array]$a = "a","b"
-    $login = Read-Host
-    for($i=1 ;$i -le $a.Length; $i++){
-        $switch += "switch(`$login)`n $i{`$($a[$i-1])`n break `n}"
-    }
-    $switch += "`n}"
-    Invoke-Expression $switch
 }
 function Menu-ManageFind{
     Write-Host 'PowerCraft MSM (Minecraft Server Manager) V1.0'
@@ -84,7 +42,7 @@ function Menu-ManageFind{
     Write-Host '---------------------------------------------------------------------'
     Write-Host '|Please input the full path to your Minecraft server folder         |'
     Write-Host '---------------------------------------------------------------------'
-    $manageFindMenuIn = Read-Host "->"
+    [path]$manageFindMenuIn = Read-Host "->"
     $ServerFolder = $manageFindMenuIn
     if(Test-Path -Path "$manageFindMenuIn\server.properties"){
         Write-Host "Path:"
@@ -112,6 +70,17 @@ function Menu-ManageFind{
         Write-Warning 'Please enter a valid path that contains a "server.properties" file!'
         Menu-ManageFind
     }
+}
+function Download-File($sourceFile, $targetDirectory) {
+    $wc = New-Object System.Net.WebClient
+    $sourceFileName = $sourceFile.SubString($sourceFile.LastIndexOf('/')+1)
+    $targetFileName = $targetDirectory + $sourceFileName
+    $wc.DownloadFile($sourceFile, $targetFileName)
+    Write-Host "Downloaded $sourceFile to file location $targetFileName"
+}
+function Create-Server($ServerPath){
+    Download-File -sourceFile $dlurl -targetDirectory $ServerPath
+
 }
 function Menu-CreateMain{
     Write-Host "Confirm server creation:"
@@ -164,6 +133,8 @@ function Menu-Main{
         }
     }
 }
+$ver = 1.8.1
+$dlurl = "https://s3.amazonaws.com/Minecraft.Download/versions/$ver/minecraft_server.$ver.jar"
 $console = $host.UI.RawUI
 $console.ForegroundColor = "Green"
 $console.BackgroundColor = "DarkRed"
